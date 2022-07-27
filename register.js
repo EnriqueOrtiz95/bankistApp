@@ -26,24 +26,28 @@ form.addEventListener('submit', function(e){
 })
 
 const showAlert = function(message, type){
+  const alerta = document.querySelector('.alerta');
+
+  if(!alerta){
     const divMessage = document.createElement('div');
-    divMessage.classList.add('text-center', 'alert');
+    divMessage.classList.add('text-center', 'alert', 'alerta');
 
-      if(type === 'error'){
-          divMessage.classList.add('alert-danger');
-      }else{
-          divMessage.classList.add('alert-success');
-      }
+    if(type === 'error'){
+        divMessage.classList.add('alert-danger');
+    }else{
+        divMessage.classList.add('alert-success');
+    }
 
-      //error msg
-      divMessage.textContent = message;
+    //error msg
+    divMessage.textContent = message;
 
-      //HTML insert
-      document.querySelector('.registration').insertBefore(divMessage, form);
-  
-      setTimeout(() => {
-          divMessage.remove();
-      }, 3000);
+    //HTML insert
+    document.querySelector('.registration').insertBefore(divMessage, form);
+
+    setTimeout(() => {
+        divMessage.remove();
+    }, 3000);
+  }
 }
 
 
