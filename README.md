@@ -1,7 +1,7 @@
 # bankistApp
 Simulation of a bank app using HTML / CSS / JS.
 
-NOTE: This is an extra from Jonas Schedtmann's project from his JS course, i added some cool features at this so hope you guys enjoy it ;)
+Project credits belongs to Jonas Schedtmann's from his JS course, i added some cool features at this as a self-challenge so hope you guys enjoy it ;)
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FUNCTIONALITY <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
