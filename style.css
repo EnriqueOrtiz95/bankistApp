@@ -437,5 +437,15 @@ input{
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      flex-wrap: wrap;
+   }
+   .summary{
+    display: unset;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   }
+   .operation{
+    margin-bottom: 2rem;
    }
 }
