@@ -5,7 +5,7 @@ NOTE: This is an extra from Jonas Schedtmann's project from his JS course, i add
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FUNCTIONALITY <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-#BankistApp allows you to keep track of your transactions through a bank account, you will deposit $500 in entrance for opening your bank account.
+#BankistApp allows you to keep track of your transactions through a bank account, you will get $500 deposited in entrance for opening your bank account.
 
 #In the beginning of the app you will find an interface where you can login through your user and PIN, you have to create one in the pink field "Here"
 
