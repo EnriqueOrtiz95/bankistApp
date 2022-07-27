@@ -2,13 +2,17 @@
 const inputName = document.querySelector('#input-name');
 const inputPIN = document.querySelector('#input-pin');
 const form = document.querySelector('.formulario');
+const verifyInputPIN = document.querySelector('#verify-inputpin')
 
 const fullName = /^[a-zA-Z]+ [a-zA-Z]+$/;
 
 form.addEventListener('submit', function(e){
   e.preventDefault();
   if(!fullName.test(inputName.value) || inputPIN.value === ''){
-      return showAlert('You havent passed the validation', 'error');
+    return showAlert('You havent passed the validation', 'error');
+  }
+  if(inputPIN.value !== verifyInputPIN.value){
+    return showAlert('PINs doesnt match!', 'error');
   }
     alert(`Your username is ${inputName.value.toLowerCase().split(' ').map(e => e[0]).join('')}`)
     createAccount(); //?CREATING AN ACCOUNT
