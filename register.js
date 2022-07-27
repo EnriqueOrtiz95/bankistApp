@@ -9,10 +9,13 @@ const fullName = /^[a-zA-Z]+ [a-zA-Z]+$/;
 form.addEventListener('submit', function(e){
   e.preventDefault();
   if(!fullName.test(inputName.value) || inputPIN.value === ''){
-    return showAlert('You havent passed the validation', 'error');
+    return showAlert('Your name must only contain name and first sunname', 'error');
   }
   if(inputPIN.value !== verifyInputPIN.value){
     return showAlert('PINs doesnt match!', 'error');
+  }
+  if(inputName.value.length !== 4 && verifyInputPIN.value.length !== 4){
+    return showAlert('Your PIN must contain 4 numbers!', 'error');
   }
     alert(`Your username is ${inputName.value.toLowerCase().split(' ').map(e => e[0]).join('')}`)
     createAccount(); //?CREATING AN ACCOUNT
