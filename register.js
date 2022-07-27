@@ -10,8 +10,7 @@ form.addEventListener('submit', function(e){
   if(!fullName.test(inputName.value) || inputPIN.value === ''){
       return showAlert('You havent passed the validation', 'error');
   }
-    // console.log('todo fine')
-
+    alert(`Your username is ${inputName.value.toLowerCase().split(' ').map(e => e[0]).join('')}`)
     createAccount(); //?CREATING AN ACCOUNT
     showAlert('Registration successful!');
     setTimeout(() => {
@@ -57,7 +56,7 @@ let createAccount = function(){
       id
     }
 
-    localStorage.setItem('movement' + id, JSON.stringify(objecto)) 
+    localStorage.setItem('movement' + id, JSON.stringify(objecto))
     setTimeout(() => {
         location.href = 'index.html'
     }, 2000);
