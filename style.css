@@ -1,13 +1,8 @@
-/*
- * Use this CSS to learn some intersting techniques,
- * in case you're wondering how I built the UI.
- * Have fun! 😁
- */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  transition: all .2s linear;
 }
 
 html {
@@ -19,8 +14,44 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #444;
   background-color: #f3f3f3;
+}
+
+header{
   height: 100vh;
   padding: 2rem;
+}
+
+:root{
+  --width: 30rem;
+  --width-half: 15rem;
+}
+
+.register{
+  position: absolute;
+  width: var(--width);
+  /* b  ottom: 50%; */
+  right: calc(50% - (var(--width-half)) );
+  margin-top: 5rem;
+  z-index: 100;
+  background-color: #ff585f;
+  color: white;
+  padding: 2rem;
+  font-size: 1.8rem;
+  transition: transform .5s;
+}
+.register a{
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.register a:hover{
+  color: #C2714F;
+}
+
+.register:hover{
+  transform: scale(1.1);
 }
 
 nav {
@@ -90,7 +121,7 @@ nav {
   margin: 2rem auto;
   display: grid;
   grid-template-columns: 4fr 3fr;
-  grid-template-rows: auto repeat(3, 15rem) auto;
+  grid-template-rows: auto repeat(3, (var(--width-half))) auto;
   gap: 2rem;
 
   /* NOTE This creates the fade in/out anumation */
@@ -201,9 +232,10 @@ nav {
   margin-left: auto;
   border: none;
   background: none;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 500;
   cursor: pointer;
+  color: #e52a5a;
 }
 
 /* OPERATIONS */
@@ -304,10 +336,106 @@ h2 {
 }
 .logout-btn{
   display: inline-block;
-  width: 15rem;
+  width: var(--width-half);
   padding: .5rem;
   border-radius: .5rem;
   cursor: pointer;
   background-color: crimson;
   color: white;
+}
+
+.div-center{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration{
+  width: var(--width);
+}
+.formulario{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #e52a5a;
+  padding: 2rem;
+}
+.formulario > * {
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.btn{
+    background-color: #bbb;
+    padding: 1.2rem 3rem;
+    color: black;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    display: inline-block;
+    font-weight: 700;
+    border: none;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
+    cursor: pointer;
+}
+input{
+  padding: 1rem;
+}
+
+@media screen and (max-width: 767px){
+  .form{
+    max-width: 80%;
+  } 
+  .form > *{
+    font-size: 1.6rem;
+  }
+  .btn{
+    width: auto;
+    margin-right: auto;
+  }
+}
+.text-center{
+  text-align: center;
+}
+.alert{
+  background-color: #bbb;
+  padding: 2rem;
+  color: green;
+  margin-bottom: 2rem;
+}
+.alert-danger{
+  background-color: #bbb;
+  color: red;
+}
+
+.alert-success{
+  background-color: #bbb;
+  color: green;
+}
+
+/** >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MEDIA QUERIES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+@media screen and (max-width: 991px){
+   html{
+      font-size: 55%;
+   }
+   nav{
+    flex-direction: column;
+
+   }
+   nav p, nav img{
+    margin-bottom: 1rem;
+   }
+   .app{
+      display: unset;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+   }
 }
